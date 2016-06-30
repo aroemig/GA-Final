@@ -1,0 +1,34 @@
+<article class="listing">
+  <a {{action 'toggleImageSize'}} class="image {{if isWide "wide"}}">
+    <img src="{{rental.image}}" alt="">
+    <small>View Larger</small>
+  </a>
+  <h3>{{rental.name}}</h3>
+  
+  <div class="detail food">
+    {{log rental.day}}
+    <span>Food:</span> {{rental.food}}
+  </div>
+
+  <div class="detail day">
+    <span>Day:</span> {{rental.day}}   
+  </div>
+
+  <div class="detail drinks">
+    <span>Drinks:</span> {{rental.drinks}}
+  </div>
+
+  <div class="detail neighborhood">
+    <span>Neighborhood:</span> {{rental.neighborhood}}
+  </div>
+
+  <div class="detail location">
+    <span>Address:</span> {{rental.location}}
+  </div>
+
+  <div class="detail url">
+    <span>Website:</span> <a href="{{rental.url}}"target="_blank">{{rental.url}}</a>
+  </div>
+
+  {{location-map location=rental.location}}
+</article>

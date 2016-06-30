@@ -1,0 +1,34 @@
+{{outlet}}
+
+<div class="jumbo">
+
+  <h2>Chicago Happy Hour Locator</h2>
+  <p>
+    Find Happy Hours and Specials for Bar and Resturants in the Chicago-land area. 
+    Browse by day or neighborhood. Cheers!
+  </p>
+
+</div>
+<select id='dayOfWeek' {{action 'dayOfWeekChanged' on='change'}}> 
+<option value="Sunday">Sunday</option>
+<option value="Monday">Monday</option>
+<option value="Tuesday">Tuesday</option>
+<option value="Wednesday">Wednesday</option>
+<option value="Thursday">Thursday</option>
+<option value="Friday">Friday</option>
+<option value="Saturday">Saturday</option>
+</select>
+
+<select id='hoods' {{action 'neighborhoodChanged' on='change'}}> 
+<option value="Wicker Park">Wicker Park</option>
+<option value="Logan Square">Logan Square</option>
+<option value="Ukrainian Village">Ukrainian Village</option>
+<option value="The Loop">The Loop</option>
+<option value="Bucktown">Bucktown</option>
+</select>
+
+<ul class="results">
+  {{#each barsByDayOfWeek as |rentalUnit|}}
+    <li>{{rental-listing rental=rentalUnit}}</li>
+ {{/each}}
+</ul>

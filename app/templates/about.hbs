@@ -1,0 +1,38 @@
+{{outlet}}
+<div class="jumbo">
+
+  <h2>Add New Specials</h2>
+
+<form>
+  Name of Bar:<br>
+  {{input type="text" name="name" value=name}}
+  <br>
+  Day of Week:<br>
+  {{input type="text" name="dayOfweek" value=dayOfWeek}}
+  <br>
+  Food:<br>
+  {{input type="text" name="food" value=food}}
+  <br>
+   Drinks:<br>
+  {{input type="text" name="drinks" value=drinks}}
+  <br>
+  Location:<br>
+  {{input type="text" name="location" value=location}}
+  <br>
+   Neighborhood:<br>
+  {{input type="text" name="neighborhood" value=neighborhood}}
+  <br>
+  URL:<br>
+  {{input type="text" name="url" value=url}}
+  <br>
+   image:<br>
+  {{input type="text" name="image" value=image}}
+  <br>
+
+<button {{action "save"}}>Save</button>
+
+</form>
+
+
+</div>
+
